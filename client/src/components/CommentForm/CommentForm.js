@@ -46,12 +46,12 @@ const CommentForm = ({ noteId }) => {
       {Auth.loggedIn() ? (
         <>
           <p
-            className={`m-0 ${
-              characterCount === 280 || error ? 'text-danger' : ''
+            className={`m-0 font-bold text-pink-200 ${
+              characterCount === 280 || error ? 'text-pink' : ''
             }`}
           >
             Character Count: {characterCount}/280
-            {error && <span className="ml-2">{error.message}</span>}
+            {error && <span className="ml-2 font-bold text-pink-200">{error.message}</span>}
           </p>
           <form
             className="flex-row justify-center justify-space-between-md align-center"
@@ -62,8 +62,8 @@ const CommentForm = ({ noteId }) => {
                 name="commentText"
                 placeholder="Add your comment..."
                 value={commentText}
-                className="form-input w-100"
-                style={{ lineHeight: '1.5', resize: 'vertical' }}
+                className="form-input px-8 bg-black text-pink-200"
+                style={{ lineHeight: '2', resize: 'vertical' }}
                 onChange={handleChange}
               ></textarea>
             </div>

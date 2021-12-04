@@ -7,7 +7,7 @@ const CommentList = ({ comments = [] }) => {
     return (
       <>
         <h3
-          className="p-5 display-inline-block text-pink-200"
+          className="p-5 display-inline-block font-bold text-pink-200"
           style={{ borderBottom: '1px dotted #1a1a1a' }}
         >
           Comments

@@ -60,7 +60,7 @@ const NoteForm = () => {
         <>
         <div className="flex justify-center">
           <p
-            className={`m-0 ${
+            className={`m-0 font-bold text-pink-200 ${
               characterCount === 280 || error ? 'text-danger' : ''
             }`}
           >
@@ -77,7 +77,7 @@ const NoteForm = () => {
                 name="noteText"
                 placeholder="Here's a new note..."
                 value={noteText}
-                className="form-input w-100"
+                className="form-input px-9 py-18 bg-black text-pink-200 "
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
               ></textarea>
