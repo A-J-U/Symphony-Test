@@ -52,7 +52,7 @@ const Signup = () => {
             ) : (
               <form onSubmit={handleFormSubmit}>
                 <input
-                  className="flex ml-5 mr-5 form-input"
+                  className="flex ml-5 mr-5 form-input bg-black text-pink-200"
                   placeholder="Your username"
                   name="username"
                   type="text"
@@ -60,7 +60,7 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <input
-                  className="mt-5 ml-5 mr-5 form-input"
+                  className="mt-5 ml-5 mr-5 form-input bg-black text-pink-200"
                   placeholder="Your email"
                   name="email"
                   type="email"
@@ -68,7 +68,7 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <input
-                  className="mt-5 flex ml-5 mr-5 form-input"
+                  className="mt-5 flex ml-5 mr-5 form-input bg-black text-pink-200"
                   placeholder="******"
                   name="password"
                   type="password"

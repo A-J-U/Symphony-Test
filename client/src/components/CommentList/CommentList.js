@@ -1,7 +1,7 @@
 
 const CommentList = ({ comments = [] }) => {
     if (!comments.length) {
-      return <h3>No Comments Yet</h3>;
+      return <h3 className="text-pink-200">No Comments Yet</h3>;
     }
   
     return (

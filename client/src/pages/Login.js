@@ -54,7 +54,7 @@ const Login = (props) => {
             ) : (
               <form onSubmit={handleFormSubmit}>
                 <input
-                  className="flex ml-5 mr-5 form-input"
+                  className="flex ml-5 mr-5 form-input bg-black text-pink-200"
                   placeholder="Your email"
                   name="email"
                   type="email"
@@ -62,7 +62,7 @@ const Login = (props) => {
                   onChange={handleChange}
                 />
                 <input
-                  className="flex mt-5 ml-5 mr-5 form-input"
+                  className="flex mt-5 ml-5 mr-5 form-input bg-black text-pink-200"
                   placeholder="******"
                   name="password"
                   type="password"
