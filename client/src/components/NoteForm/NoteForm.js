@@ -52,13 +52,13 @@ const NoteForm = () => {
       setCharacterCount(value.length);
     }
   };
-
   return (
     <div>
-      <h3 className="flex justify-center">What's on your techy mind?</h3>
+      <h3 className="mt-6 mb-6 border border-black bg-black flex text-3xl text-green-500 rounded-full h-20 w-100 justify-center mr-50 font-mono">What's on your techy mind?</h3>
 
       {Auth.loggedIn() ? (
         <>
+        <div className="flex justify-center">
           <p
             className={`m-0 ${
               characterCount === 280 || error ? 'text-danger' : ''
@@ -66,10 +66,12 @@ const NoteForm = () => {
           >
             Character Count: {characterCount}/280
           </p>
+          </div>
           <form
             className="flex-row justify-center justify-space-between-md align-center"
             onSubmit={handleFormSubmit}
           >
+            <div className="mt-5 flex justify-center">
             <div className="col-12 col-lg-9">
               <textarea
                 name="noteText"
@@ -80,8 +82,9 @@ const NoteForm = () => {
                 onChange={handleChange}
               ></textarea>
             </div>
-
-            <div className="col-12 col-lg-3">
+            </div>
+            
+            <div className="border border-black flex justify-center col-12 col-lg-3">
               <button className="btn btn-primary btn-block py-3" type="submit">
                 Add Note
               </button>
@@ -96,7 +99,13 @@ const NoteForm = () => {
       ) : (
         <p className="flex justify-center">
           You need to be logged in to share your thoughts. Please{' '}
-          <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
+          <div className="ml-1 mr-1">
+          <Link to="/login">login</Link>
+          </div>
+          or
+          <div className="ml-1 mr-1"> 
+          <Link to="/signup">signup.</Link>
+          </div>
         </p>
       )}
     </div>

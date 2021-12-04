@@ -40,8 +40,8 @@ const CommentForm = ({ noteId }) => {
   };
 
   return (
-    <div>
-      <h4>What are your thoughts on this thought?</h4>
+    <div className="border">
+      <h4 className="text-green-400">What is your opinion on this thought?</h4>
 
       {Auth.loggedIn() ? (
         <>
@@ -69,7 +69,7 @@ const CommentForm = ({ noteId }) => {
             </div>
 
             <div className="col-12 col-lg-3">
-              <button className="btn btn-primary btn-block py-3" type="submit">
+              <button className="text-green-400 btn btn-primary btn-block py-3" type="submit">
                 Add Comment
               </button>
             </div>
