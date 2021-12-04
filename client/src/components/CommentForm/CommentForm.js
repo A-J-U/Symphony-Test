@@ -40,8 +40,8 @@ const CommentForm = ({ noteId }) => {
   };
 
   return (
-    <div className="border">
-      <h4 className="text-green-400">What is your opinion on this thought?</h4>
+    <div className="">
+      <h4 className="mb-5 mt-5 border font-bold text-green-500 rounded-full h-10 w-50 bg-black flex items-center justify-center font-mono">What is your opinion on this thought?</h4>
 
       {Auth.loggedIn() ? (
         <>
@@ -69,16 +69,22 @@ const CommentForm = ({ noteId }) => {
             </div>
 
             <div className="col-12 col-lg-3">
-              <button className="text-green-400 btn btn-primary btn-block py-3" type="submit">
+              <button className="border border-black rounded-full bg-black text-green-400 h-15 font-mono btn btn-primary btn-block py-3" type="submit">
                 Add Comment
               </button>
             </div>
           </form>
         </>
       ) : (
-        <p>
+        <p className="mb-5 mt-5 border font-bold text-green-500 rounded-full h-10 w-50 bg-black flex items-center justify-center font-mono">
           You need to be logged in to share your thoughts. Please{' '}
-          <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
+          <div className="ml-1 mr-1">
+          <Link to="/login">login</Link>
+          </div>
+           or
+           <div className="ml-1 mr-1"> 
+           <Link to="/signup">signup.</Link>
+           </div>
         </p>
       )}
     </div>

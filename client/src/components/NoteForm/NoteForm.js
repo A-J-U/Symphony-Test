@@ -54,7 +54,7 @@ const NoteForm = () => {
   };
   return (
     <div>
-      <h3 className="mt-6 mb-6 border border-black bg-black flex text-3xl text-green-500 rounded-full h-20 w-100 justify-center mr-50 font-mono">What's on your techy mind?</h3>
+      <h3 className="mt-6 mb-6 border border-white bg-black flex text-3xl text-green-500 h-10 w-100 justify-center mr-50 font-mono">What's on your techy mind?</h3>
 
       {Auth.loggedIn() ? (
         <>
@@ -84,7 +84,7 @@ const NoteForm = () => {
             </div>
             </div>
             
-            <div className="border border-black flex justify-center col-12 col-lg-3">
+            <div className="border border-white bg-black text-green-500 text-2xl flex rounded-full font-mono justify-center col-12 col-lg-3">
               <button className="btn btn-primary btn-block py-3" type="submit">
                 Add Note
               </button>
@@ -97,7 +97,7 @@ const NoteForm = () => {
           </form>
         </>
       ) : (
-        <p className="flex justify-center">
+        <p className="flex text-green-500 justify-center">
           You need to be logged in to share your thoughts. Please{' '}
           <div className="ml-1 mr-1">
           <Link to="/login">login</Link>
